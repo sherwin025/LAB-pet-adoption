@@ -240,3 +240,17 @@ const pets = [
       imageUrl: "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119"
     }
   ];
+
+  const dom = document.querySelector('#cards')
+
+  let querystring = "" 
+  for (let pie of pets){
+    querystring += `<div class="card" style="width: 18rem;">
+      <img src=${pie.imageUrl} class="card-img-top" alt=${pie.name}>
+      <div class="card-body">
+        <h5 class="card-title">${pie.name}</h5>
+        <p class="card-text">${pie.ingredients}</p>
+      </div>
+    </div>`
+  }
+  dom.innerHTML = querystring
